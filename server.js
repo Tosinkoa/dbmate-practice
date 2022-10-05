@@ -18,7 +18,14 @@ app.use(
 )
 
 const { Client } = postgres
-const client = new Client()
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    require: true,
+    rejectUnauthorized: false,
+
+  }
+})
 client.connect()
 
 // session store and session config
