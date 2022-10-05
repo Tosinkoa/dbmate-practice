@@ -30,8 +30,8 @@ create table if not exists users (
 -- migrate:up
 create table if not exists post (
     id serial primary key,
-    title varchar not null,
-    body varchar (200) not null,
+    -- title varchar not null,
+    -- body varchar (200) not null,
     food text [],
     created_at timestamptz not null default now(),
     updateed_at timestamptz not null
