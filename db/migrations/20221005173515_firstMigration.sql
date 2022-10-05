@@ -3,7 +3,7 @@ drop table if exists users;
 drop table if exists session;
 
 -- migrate:up
-create table session (
+create table if not exists session (
     sid text primary key not null,
     sess json not null,
     expire timestamptz not null
