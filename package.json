@@ -1,0 +1,25 @@
+{
+  "name": "postgres-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
+    "push-to-github": "git push https://github.com/Tosinkoa/dbmate-practice.git",
+    "fast": "git add . && git commit -m 'Done' && yarn push-to-github && git push heroku master",
+    "push-to-live": "git push heroku master",
+    "update-db-heroku": "heroku run bin/dbmate up"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "connect-pg-simple": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "pg": "^8.7.3"
+  }
+}
